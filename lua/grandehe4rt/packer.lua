@@ -12,6 +12,11 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  use 'andweeb/presence.nvim'
+  local sidebar = require("sidebar-nvim")
+  local opts = {open = true}
+  sidebar.setup(opts)
+
   use({
 	  'rose-pine/neovim',
 	  as = 'rose-pine',
